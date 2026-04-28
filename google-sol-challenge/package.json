@@ -1,0 +1,31 @@
+{
+  "name": "seva-os",
+  "version": "1.0.0",
+  "description": "Zero-interface volunteer dispatch engine",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "admin": "node admin-cli.js",
+    "test:webhook": "node test-webhook.js",
+    "test:verify": "node test-webhook.js verify",
+    "test:coordinator": "node test-webhook.js coordinator",
+    "test:volunteer": "node test-webhook.js volunteer"
+  },
+  "bin": {
+    "seva-admin": "admin-cli.js",
+    "seva-test": "test-webhook.js"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.43.0",
+    "axios": "^1.7.2",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
